@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "userId": 2,
+      "id": 2,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "userId": 3,
+      "id": 3,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "userId": 4,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      "userid": 7,
+      "title": "r",
+      "body": "r",
+      "id": 5
+    },
+    {
+      "userid": 8,
+      "title": "dddfgrgf",
+      "body": "ffff",
+      "id": 7
+    },
+    {
+      "userid": 10,
+      "title": "tyyyikldrdr",
+      "body": "tyyiyi",
+      "id": 9
+    },
+    {
+      "userid": 8,
+      "title": "ui",
+      "body": "yui",
+      "id": 10
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
