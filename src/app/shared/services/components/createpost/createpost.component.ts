@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Route, Router } from '@angular/router';
 import { PostService } from '../../post-services.service';
-import { subscribeOn } from 'rxjs';
+import { concatMap, subscribeOn } from 'rxjs';
 
 @Component({
   selector: 'app-createpost',
@@ -23,21 +23,35 @@ export class CreatepostComponent implements OnInit {
 
   ngOnInit(): void {
     this.createPostForm();
+    // this._route.params
+    // .subscribe((params : Params)  => {
+    //   this.postid =  +params['id']
+
+    //   if(this.postid){
+    //   this._postservice.getPost(this.postid)
+    //    .subscribe( (res) => {
+    //        console.log(res);
+    //        this.postForm.patchValue(res);
+    //       })
+    //   }
+    // })
+
+    
     this._route.params
-    .subscribe((params : Params)  => {
-      this.postid =  +params['id']
-
-
-      if(this.postid){
-      this._postservice.getPost(this.postid)
-       .subscribe( (res) => {
-           console.log(res);
-           this.postForm.patchValue(res);
-          })
+     .pipe(
+      concatMap((params : Params) => {
+        this.postid = +params['id']
+      
+        return this._postservice.getPost(this.postid)
+      
+      })
+     )
+     .subscribe(
+      (res) => {
+        this.postForm.patchValue(res)
       }
-    })
+     )
     console.log(Math.ceil(Math.random() * 10))
-
   }
 
 
@@ -47,6 +61,7 @@ export class CreatepostComponent implements OnInit {
       body : new FormControl('', [Validators.required]),
      })
    }
+
 
    onPostCreate(){
     if(this.postForm.valid){
@@ -85,7 +100,6 @@ export class CreatepostComponent implements OnInit {
        this._router.navigate(['/posts']) },
       (err) => console.log(err)
     )
-  
   }
+ }
 
-}
